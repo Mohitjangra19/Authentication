@@ -1,0 +1,51 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    width: 350px;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 { text-align: center; }
+form { display: flex; flex-direction: column; gap: 15px; margin-bottom: 20px; }
+input, button { padding: 12px; border-radius: 5px; border: 1px solid #ccc; font-size: 1rem; }
+button { background-color: #007bff; color: white; cursor: pointer; border: none; }
+button:hover { background-color: #0056b3; }
+
+/* This is the important class for hiding/showing elements */
+.hidden { display: none; }
+
+/* Styling for the feedback message area */
+#message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Add this to style.css */
+#mfa-enroll-section {
+    margin-top: 2rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.mfa-setup-step {
+    margin-top: 1rem;
+}
+
+#mfa-qr-code svg {
+    display: block;
+    margin: 1rem auto;
+}

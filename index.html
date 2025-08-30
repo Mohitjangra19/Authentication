@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supabase Auth</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Supabase Auth Demo</h1>
+
+        <div id="auth-forms">
+            <form id="signup-form">
+                <h2>Sign Up</h2>
+                <input type="email" id="signup-email" placeholder="Your Email" required>
+                <input type="password" id="signup-password" placeholder="Your Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <form id="login-form">
+                <h2>Login</h2>
+                <input type="email" id="login-email" placeholder="Your Email" required>
+                <input type="password" id="login-password" placeholder="Your Password" required>
+                <button type="submit">Login</button>
+            </form>
+
+            <form id="mfa-challenge-form" class="hidden">
+                <h2>Enter Authentication Code</h2>
+                <input type="text" id="mfa-challenge-code" placeholder="Your 6-digit code" required>
+                <button type="submit">Complete Login</button>
+            </form>
+        </div>
+
+        <div id="message"></div>
+
+        <div id="user-info" class="hidden">
+            <p>Welcome, <strong id="user-email"></strong>!</p>
+            <div id="mfa-enroll-section">
+                <h3>Enable Multi-Factor Authentication</h3>
+                <button id="enroll-mfa-button">Enable MFA</button>
+                <div id="mfa-qr-code" class="mfa-setup-step hidden">
+                    <p>Scan this QR code with your authenticator app:</p>
+                </div>
+                <form id="mfa-verify-form" class="mfa-setup-step hidden">
+                    <input type="text" id="mfa-verify-code" placeholder="Enter 6-digit code" required>
+                    <button type="submit">Verify & Activate</button>
+                </form>
+            </div>
+            <button id="logout-button">Logout</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
